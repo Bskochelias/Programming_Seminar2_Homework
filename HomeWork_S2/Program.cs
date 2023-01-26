@@ -114,7 +114,48 @@ do
   //3. Задать номер четверти, показать диапазоны для возможных координат
   if (otvet == 3)
     {
-      int a3;
+      int a3, x=0, y=0;
+      while (x < 40)
+        {
+          if(x!=20)
+          { Console.SetCursorPosition(x, 5);
+            Console.WriteLine("*");
+          }
+          x++;
+        }
+
+      while (y < 11)
+        { Console.SetCursorPosition(20, y);
+          Console.WriteLine("*");
+          y++;
+        }
+      
+      Console.SetCursorPosition(30, 2);
+      Console.WriteLine("1");
+
+            Console.SetCursorPosition(10, 2);
+      Console.WriteLine("2");
+
+      Console.SetCursorPosition(10, 8);
+      Console.WriteLine("3");
+
+      Console.SetCursorPosition(30, 8);
+      Console.WriteLine("4");
+
+      Console.SetCursorPosition(1, 12);
+      Console.Write("Введите номер четверти: ");
+      a3 = Proverca_chisla();
+      
+      Console.Clear();
+      switch(a3)
+      {
+        case 1: {Console.WriteLine("Возможные кардинаты по x от +1 до +∞, по y от +1 до +∞ "); break;}
+        case 2: {Console.WriteLine("Возможные кардинаты по x от -1 до -∞, по y от +1 до +∞ "); break;}
+        case 3: {Console.WriteLine("Возможные кардинаты по x от -1 до -∞, по y от -1 до -∞ "); break;}
+        case 4: {Console.WriteLine("Возможные кардинаты по x от +1 до +∞, по y от -1 до -∞ "); break;}
+        default: {Console.WriteLine("Такой четверти нет!"); break;}
+      }
+    }
 
 //Конец тела задач    
   Console.Write("Нажмите <Enter> для продолжения... ");
