@@ -35,7 +35,7 @@ do
     Console.WriteLine("2. По двум заданным числам проверять является ли одно квадратом другого");
     Console.WriteLine("3. Задать номер четверти, показать диапазоны для возможных координат");
     Console.WriteLine("4. Найти расстояние между точками в пространстве 2D");
-    Console.WriteLine("5. Найти расстояние между точками в пространстве 3D");
+    Console.WriteLine("5. Найти расстояние между двумя точками в пространстве");
     Console.WriteLine("__________");
     Console.WriteLine(" ");
 
@@ -182,6 +182,49 @@ do
 
       Console.WriteLine($"Растояние между двумя точками {rast}");
 
+    }
+
+  //5. Найти расстояние между двумя точками в пространстве 
+  // AB = √(xb - xa)2 + (yb - ya)2 + (nb - na)2.... - формула n количественное пространство
+  // (3 - 0)2 + (1 - (-3))2 + (3 - 3)2 =5
+
+  if (otvet == 5)
+    {
+      
+      int pro, i=0, j=0;
+      double  rast=0;
+
+      Console.Write("Введите количество пространств: ");
+      pro = Proverca_chisla();
+
+      int[]  xa5 = new int[pro],
+              ya5 = new int[pro];
+
+      while (i < pro)
+      {      
+          Console.Write($"Введите {i+1} значения первого пространства: ");
+          xa5[i] = Proverca_chisla();          
+          i++;
+      }
+
+      i = 0;
+      while (i < pro)
+      {      
+          Console.Write($"Введите {i+1} значения второго пространства: ");
+          ya5[i] = Proverca_chisla();          
+          i++;
+      }
+
+      i=0;
+      while (i < pro)
+      {
+        rast = rast + (ya5[i]-xa5[i])*(ya5[i]-xa5[i]);
+        i++;
+      }
+      
+      rast = Math.Sqrt(rast);
+      Console.WriteLine($"Расстояние между двумя точками в {pro}D пространстве равна: ");
+      Console.WriteLine(rast);
     }
 
 //Конец тела задач    
