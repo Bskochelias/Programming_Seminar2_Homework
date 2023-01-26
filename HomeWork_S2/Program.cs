@@ -191,7 +191,7 @@ do
   if (otvet == 5)
     {
       
-      int pro, i=0, j=0;
+      int pro, i=0;
       double  rast=0;
 
       Console.Write("Введите количество пространств: ");
