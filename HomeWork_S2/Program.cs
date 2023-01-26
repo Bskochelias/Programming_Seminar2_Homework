@@ -157,6 +157,33 @@ do
       }
     }
 
+  //4. Найти расстояние между точками в пространстве 2D
+  // AB = √(xb - xa)2 + (yb - ya)2 - формула
+
+  if (otvet == 4)
+    {
+      int xa4, ya4,
+          xb4, yb4;
+      double  rast;
+
+      Console.Write("Введите X кординаты первой точки: ");
+      xa4 = Proverca_chisla();
+
+      Console.Write("Введите Y кординаты первой точки: ");
+      ya4 = Proverca_chisla();
+
+      Console.Write("Введите X кординаты второй точки: ");
+      xb4 = Proverca_chisla();
+
+      Console.Write("Введите Y кординаты второй точки: ");
+      yb4 = Proverca_chisla();
+      
+      rast = Math.Sqrt((xb4-xa4)*(xb4-xa4)+(yb4-ya4)*(yb4-ya4));
+
+      Console.WriteLine($"Растояние между двумя точками {rast}");
+
+    }
+
 //Конец тела задач    
   Console.Write("Нажмите <Enter> для продолжения... ");
       while (Console.ReadKey().Key != ConsoleKey.Enter) {}
