@@ -202,7 +202,7 @@ do
 
       while (i < pro)
       {      
-          Console.Write($"Введите {i+1} значения первого пространства: ");
+          Console.Write($"Введите {i+1} значения первого точки: ");
           xa5[i] = Proverca_chisla();          
           i++;
       }
@@ -210,7 +210,7 @@ do
       i = 0;
       while (i < pro)
       {      
-          Console.Write($"Введите {i+1} значения второго пространства: ");
+          Console.Write($"Введите {i+1} значения второго точки: ");
           ya5[i] = Proverca_chisla();          
           i++;
       }
